@@ -1,4 +1,31 @@
-# The run_analysis.R script utilizes data gathered during the following experiments:
+## The course assignment for the Coursera Getting and Cleaning Data course was completed using the following datasets, all created from the data listed below, created during the original experiments:
+
+### Data sets created:
+
+data_samples = combined sampling data from the train/X_train.txt and test/X_test.txt data sets, subsetted to include only mean and standard deviation data
+
+tidy_data = tidy data set with the average of each variable for each activity and each subject
+
+### Key elements used during the creation of the above data sets:
+
+mean_std_features = vector containing indices of all columns of the sampling data containing either a mean or standard deviation value
+
+act_lables = table used to map activity IDs to their corresponding activity name
+
+subject_data = table of all subjects observed during the experiments
+
+### Column additions, changes and name changes
+
+The following changes were made or added to the resulting tidy.txt data set to facilitate readability:
+
+Closing () were removed from all column names
+All occurances of "mean" in column names were changed to display "Mean"
+All occurances of "std" in column names were changed to display "Std"
+All dashes were removed from all column names
+The subject id was added as the first column, nameed "Subject"
+Descriptive activity names were added in a second column, named "Activity"
+
+## Details and credits for the original experiment:
 
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
@@ -65,33 +92,4 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
-
-## The course assignment for the Coursera Getting and Cleaning Data course was
-## completed using the following datasets, all created from the data listed above:
-
-### Data sets created:
-
-data_samples = combined sampling data from the train/X_train.txt and test/X_test.txt data sets, subsetted to include only mean and standard deviation data
-
-tidy_data = tidy data set with the average of each variable for each activity and each subject
-
-### Key elements used during the creation of the above data sets:
-
-mean_std_features = vector containing indices of all columns of the sampling data containing either a mean or standard deviation value
-
-act_lables = table used to map activity IDs to their corresponding activity name
-
-subject_data = table of all subjects observed during the experiments
-
-### Column additions, changes and name changes
-
-The following changes were made or added to the resulting tidy.txt data set to facilitate readability:
-
-Closing () were removed from all column names
-All occurances of "mean" in column names were changed to display "Mean"
-All occurances of "std" in column names were changed to display "Std"
-All dashes were removed from all column names
-The subject id was added as the first column, nameed "Subject"
-Descriptive activity names were added in a second column, named "Activity"
-
 
