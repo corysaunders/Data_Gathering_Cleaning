@@ -51,4 +51,4 @@ names(data_samples) <- gsub("\\(\\)", "", names(data_samples))
 tidy_data <- data.table(cbind(subject_data, activities, data_samples))[, lapply(.SD, mean), by=c("Subject","Activity")]
 
 ## Write the tidy data set to a file
-write.table(tidy_data, "tidy.txt")
+write.table(tidy_data, "tidy.txt", row.names=FALSE)
